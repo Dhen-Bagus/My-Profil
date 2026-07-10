@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hadi Bagus Indrawan — Frontend & Mobile Developer</title>
+  <meta name="description" content="Portfolio Hadi Bagus Indrawan — Frontend & Mobile Developer, Mahasiswa Teknik Informatika Universitas Budi Luhur." />
 
-  <title>Hadi Bagus Indrawan</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 
-  <!-- Bootstrap -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
-  <!-- AOS Animation -->
-  <link
-    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-    rel="stylesheet"
-  />
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
@@ -24,400 +23,379 @@
 
 <body>
 
-  <!-- HERO SECTION -->
-  <section class="hero-section">
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">HBI<span class="accent">.</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#journey">Journey</a>
+        <a href="https://github.com/Dhen-Bagus" target="_blank" class="nav-cta">GitHub</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#skills" onclick="closeMenu()">Skills</a>
+    <a href="#projects" onclick="closeMenu()">Projects</a>
+    <a href="#journey" onclick="closeMenu()">Journey</a>
+    <a href="https://github.com/Dhen-Bagus" target="_blank" onclick="closeMenu()">GitHub</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-glow"></div>
     <div class="container">
+      <div class="hero-grid">
 
-      <div class="row align-items-center min-vh-100">
-
-        <!-- FOTO -->
-        <div
-          class="col-lg-5 text-center"
-          data-aos="fade-right"
-        >
-
-          <img
-            src="assets/foto.png"
-            alt="Profile"
-            class="profile-image"
-          />
-
-          <div class="profile-info">
-
-            <h2 class="profile-name">
-              Hadi Bagus Indrawan
-            </h2>
-
-            <p class="profile-detail">
-              Mahasiswa Aktif Semester 6
-            </p>
-
-            <p class="profile-detail">
-              Universitas Budi Luhur - Teknik Informatika
-            </p>
-
-            <p class="profile-detail">
-              IPK Terakhir : 3.60
-            </p>
-
+        <!-- Left: Text -->
+        <div class="hero-text" data-aos="fade-up">
+          <div class="hero-badge">Open to Opportunities</div>
+          <h1>Hadi Bagus<br/>Indrawan</h1>
+          <p class="hero-role">Frontend & Mobile Developer</p>
+          <p class="hero-desc">
+            Mahasiswa Teknik Informatika Universitas Budi Luhur semester 6 dengan passion di pengembangan
+            Frontend Website, Mobile Apps, dan UI modern. Berpengalaman membangun project nyata
+            dari company profile hingga sistem monitoring enterprise.
+          </p>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">3.60</span>
+              <span class="stat-label">IPK</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">6</span>
+              <span class="stat-label">Semester</span>
+            </div>
           </div>
-
-        </div>
-
-        <!-- TEXT -->
-        <div
-          class="col-lg-7 text-center text-lg-start mt-5 mt-lg-0"
-          data-aos="fade-left"
-        >
-
-          <h1 class="name-title">
-            MY PROFILE
-          </h1>
-
-          <h3 class="role-text">
-            Frontend & Mobile Developer
-          </h3>
-
-          <div class="description">
-
-            <p>
-              Mahasiswa Teknik Informatika Universitas Budi Luhur
-              dengan minat pada pengembangan Frontend Website,
-              Mobile Development, dan UI responsive modern.
-            </p>
-
-            <p>
-              Memiliki pengalaman mengerjakan beberapa project
-              seperti website company profile, dashboard admin,
-              dan aplikasi monitoring berbasis mobile.
-            </p>
-
-            <p>
-              Memahami dasar pengembangan menggunakan HTML, CSS,
-              JavaScript, Bootstrap, GitHub, React Native,
-              serta integrasi API dasar.
-            </p>
-
-            <p>
-              Memiliki pemahaman dasar mengenai keamanan web
-              seperti SQL Injection, XSS, dan praktik pengujian
-              kerentanan web menggunakan environment pembelajaran
-              seperti OWASP Juice Shop.
-            </p>
-
-            <p>
-              Terbiasa memanfaatkan AI tools untuk membantu proses
-              belajar, debugging, eksplorasi ide, dan pengembangan project.
-            </p>
-
-            <p>
-              Saat ini masih terus mengembangkan kemampuan dan pengalaman
-              secara bertahap dengan fokus pada pembelajaran teknologi modern
-              dan pengalaman project nyata.
-            </p>
-
-          </div>
-
-          <div class="button-group">
-
-            <a
-              href="https://github.com/Dhen-Bagus"
-              target="_blank"
-              class="custom-btn"
-            >
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <i data-lucide="folder-open" class="btn-icon"></i>
+              Lihat Project
+            </a>
+            <a href="https://github.com/Dhen-Bagus" target="_blank" class="btn btn-outline">
+              <i data-lucide="github" class="btn-icon"></i>
               GitHub
             </a>
+          </div>
+        </div>
 
-            <a
-              href="#project"
-              class="custom-btn secondary-btn"
-            >
-              My Project
+        <!-- Right: Photo -->
+        <div class="hero-photo" data-aos="fade-up" data-aos-delay="200">
+          <div class="photo-wrapper">
+            <img src="assets/foto.png" alt="Hadi Bagus Indrawan" />
+            <div class="photo-card">
+              <p class="photo-card-name">Hadi Bagus Indrawan</p>
+              <p class="photo-card-detail">Universitas Budi Luhur</p>
+              <p class="photo-card-detail">Teknik Informatika</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">About Me</span>
+        <h2>Mengenal Lebih Dekat</h2>
+      </div>
+      <div class="about-grid" data-aos="fade-up" data-aos-delay="100">
+        <div class="about-card">
+          <div class="about-icon"><i data-lucide="code-2"></i></div>
+          <h3>Frontend Development</h3>
+          <p>Membangun antarmuka web modern dan responsive menggunakan HTML, CSS, JavaScript, Bootstrap, dan React. Fokus pada clean code dan user experience yang optimal.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon"><i data-lucide="smartphone"></i></div>
+          <h3>Mobile Development</h3>
+          <p>Pengembangan aplikasi mobile cross-platform menggunakan React Native & Expo, terintegrasi dengan backend API, Firebase, dan Google Maps API.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon"><i data-lucide="shield-check"></i></div>
+          <h3>Web Security Basics</h3>
+          <p>Pemahaman dasar keamanan web seperti SQL Injection, XSS, dan praktik pengujian kerentanan menggunakan OWASP Juice Shop.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon"><i data-lucide="sparkles"></i></div>
+          <h3>AI-Assisted Workflow</h3>
+          <p>Terbiasa memanfaatkan AI tools untuk debugging, eksplorasi ide, memahami alur coding, dan mempercepat proses development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Tech Stack</span>
+        <h2>Tools & Technologies</h2>
+      </div>
+      <div class="skills-grid" data-aos="fade-up" data-aos-delay="100">
+        <div class="skill-item"><span class="skill-dot"></span>HTML5</div>
+        <div class="skill-item"><span class="skill-dot"></span>CSS3</div>
+        <div class="skill-item"><span class="skill-dot"></span>JavaScript</div>
+        <div class="skill-item"><span class="skill-dot"></span>Bootstrap</div>
+        <div class="skill-item"><span class="skill-dot"></span>React Native</div>
+        <div class="skill-item"><span class="skill-dot"></span>Expo</div>
+        <div class="skill-item"><span class="skill-dot"></span>Firebase</div>
+        <div class="skill-item"><span class="skill-dot"></span>Git & GitHub</div>
+        <div class="skill-item"><span class="skill-dot"></span>REST API</div>
+        <div class="skill-item"><span class="skill-dot"></span>Google Maps API</div>
+        <div class="skill-item"><span class="skill-dot"></span>Vercel Deploy</div>
+        <div class="skill-item"><span class="skill-dot"></span>SEO Basics</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Portfolio</span>
+        <h2>Featured Projects</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card featured" data-aos="fade-up">
+          <div class="project-number">01</div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">Production</span>
+              <span class="tag">SEO</span>
+              <span class="tag">Custom Domain</span>
+            </div>
+            <h3>Company Profile — PT Manunggal Tekhnologi Indonesia</h3>
+            <p>
+              Website company profile modern yang telah di-deploy ke production dengan custom domain.
+              Dioptimasi SEO hingga terindeks dan muncul di Google Search. Desain responsive
+              untuk semua ukuran layar.
+            </p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>Bootstrap</span><span>JavaScript</span>
+            </div>
+            <a href="https://manunggaltekhnologiindonesia.com/" target="_blank" class="project-btn">
+              <i data-lucide="external-link" class="btn-icon"></i>
+              View Project
             </a>
+          </div>
+        </div>
 
+        <!-- Project 2 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-number">02</div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">Firebase</span>
+              <span class="tag">Role-Based Access</span>
+              <span class="tag">Realtime</span>
+            </div>
+            <h3>Sistem Absensi Digital — Yayasan Manunggal Bima Suci</h3>
+            <p>
+              Sistem absensi berbasis web dengan role management (Direktur, Pengurus, Karyawan).
+              Fitur monitoring kehadiran realtime, dashboard per-role, dan tampilan responsive.
+              Dikembangkan untuk kebutuhan operasional yayasan.
+            </p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Firebase</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="project-btn">
+                <i data-lucide="external-link" class="btn-icon"></i>
+                View Project
+              </a>
+              <div class="demo-login">
+                <p class="demo-label"><i data-lucide="key" class="key-icon"></i> Demo Login</p>
+                <div class="demo-credentials">
+                  <code>Email: joko321@gmail.com</code>
+                  <code>Pass: joko321</code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-number">03</div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">React Native</span>
+              <span class="tag">Enterprise</span>
+              <span class="tag">Google Maps API</span>
+            </div>
+            <h3>Monitoring & Laporan Kunjungan — PT Beauty World Indonesia</h3>
+            <p>
+              Sistem monitoring kunjungan teknisi yang lahir dari pengalaman kerja langsung di lapangan.
+              Mengubah proses manual via WhatsApp menjadi sistem digital terintegrasi.
+              Mendukung workflow operasional: penugasan, absensi berbasis lokasi GPS,
+              selfie dengan metadata, hingga pelaporan digital ke ERP perusahaan.
+            </p>
+            <div class="project-tech">
+              <span>React Native</span><span>Expo</span><span>Google Maps API</span><span>REST API</span>
+            </div>
+            <a href="comingsoon.html" class="project-btn coming-soon">
+              <i data-lucide="construction" class="btn-icon"></i>
+              In Development
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4 - NEW -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-number">04</div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">Frontend Design</span>
+              <span class="tag">Deployed</span>
+              <span class="tag">Vercel</span>
+            </div>
+            <h3>Travel Booking — Frontend Design</h3>
+            <p>
+              Desain frontend untuk platform pemesanan perjalanan wisata.
+              Tampilan modern dengan layout yang clean, navigasi intuitif,
+              dan visual yang menarik untuk pengalaman pengguna yang optimal.
+            </p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Vercel</span>
+            </div>
+            <a href="https://design-front-end-web-travel-boking-psi.vercel.app/" target="_blank" class="project-btn">
+              <i data-lucide="external-link" class="btn-icon"></i>
+              View Project
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 5 - NEW -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-number">05</div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">Data Visualization</span>
+              <span class="tag">Dashboard</span>
+              <span class="tag">Deployed</span>
+            </div>
+            <h3>Indonesia Unemployment Dashboard</h3>
+            <p>
+              Dashboard interaktif yang memvisualisasikan data pengangguran di Indonesia.
+              Menampilkan statistik, grafik tren, dan analisis data secara visual
+              untuk memudahkan pemahaman kondisi ketenagakerjaan.
+            </p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Vercel</span>
+            </div>
+            <a href="https://indonesia-unemployment-dashboard.vercel.app/" target="_blank" class="project-btn">
+              <i data-lucide="external-link" class="btn-icon"></i>
+              View Project
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section class="journey" id="journey">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Story</span>
+        <h2>My Learning Journey</h2>
+      </div>
+
+      <div class="journey-content" data-aos="fade-up" data-aos-delay="100">
+        <div class="journey-timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Mulai dari Nol</h4>
+              <p>Lulusan SMK non-programming yang memulai perjalanan teknologi dari dasar. Sebagai mahasiswa kelas karyawan, harus menyeimbangkan kerja lapangan dengan kuliah — belajar di setiap waktu luang yang tersedia.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Belajar Mandiri</h4>
+              <p>Mengembangkan kemampuan melalui AI tools, dokumentasi, YouTube, dan praktik langsung. Membuktikan bahwa konsistensi, rasa ingin tahu, dan keberanian mencoba bisa menggantikan keterbatasan waktu formal.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Project Nyata</h4>
+              <p>Dari membangun company profile hingga sistem monitoring enterprise — setiap project mengajarkan bahwa development bukan hanya coding, tapi juga memahami kebutuhan lapangan, problem solving, dan komunikasi tim.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Terus Berkembang</h4>
+              <p>Saat ini terus memperdalam kemampuan technical dan soft skill, dengan fokus pada teknologi modern dan membangun sistem yang lebih profesional. Selalu terbuka untuk peluang baru dan tantangan yang lebih besar.</p>
+            </div>
           </div>
 
         </div>
-
       </div>
-
     </div>
-
   </section>
 
-  <!-- PROJECT SECTION -->
-  <section
-    class="project-section"
-    id="project"
-  >
-
+  <!-- FOOTER -->
+  <footer class="footer">
     <div class="container">
-
-      <h2
-        class="section-title text-center"
-        data-aos="fade-up"
-      >
-        My Projects
-      </h2>
-
-      <div class="project-wrapper">
-
-        <!-- PROJECT 1 -->
-        <div
-          class="project-card"
-          data-aos="zoom-in"
-        >
-
-          <h3>
-            Company Profile PT Manunggal Tekhnologi Indonesia
-          </h3>
-
-          <div class="project-line"></div>
-
-          <p>
-            Website company profile modern berbasis Bootstrap
-            yang dikembangkan untuk menampilkan informasi perusahaan,
-            layanan, dan kontak secara professional dengan desain
-            responsive untuk desktop maupun mobile.
-          </p>
-
-          <p>
-            Project ini telah melalui proses deployment production,
-            konfigurasi custom domain, serta optimasi SEO dasar
-            hingga website berhasil terindeks dan tampil pada
-            pencarian Google Search.
-          </p>
-
-          <a
-  href="https://manunggaltekhnologiindonesia.com/"
-  target="_blank"
-  class="demo-btn"
->
-  🚀 Demo / Buka Project
-</a>
-
+      <div class="footer-content">
+        <div class="footer-left">
+          <p class="footer-logo">HBI<span class="accent">.</span></p>
+          <p class="footer-text">Frontend & Mobile Developer</p>
         </div>
-
-        <!-- PROJECT 2 -->
-        <div
-          class="project-card"
-          data-aos="zoom-in"
-          data-aos-delay="200"
-        >
-
-          <h3>
-            Absensi berbasis Firebase Yayasan Manunggal Bima Suci
-          </h3>
-
-          <div class="project-line"></div>
-
-          <p>
-            Sistem absensi digital berbasis web yang dikembangkan
-            untuk kebutuhan operasional Yayasan Manunggal Bima Suci
-            dengan konsep role-based access management.
-          </p>
-
-          <p>
-            Sistem memiliki beberapa level hak akses seperti Direktur,
-            Pengurus, dan Karyawan. Direktur memiliki akses penuh
-            untuk mengelola data karyawan dan monitoring absensi.
-            Pengurus dapat melakukan absensi sekaligus melihat data
-            kehadiran karyawan. Sedangkan karyawan hanya dapat
-            melakukan absensi masuk, keluar, dan melihat riwayat
-            absensinya sendiri.
-          </p>
-
-          <p>
-            Project ini dikembangkan menggunakan HTML, CSS,
-            JavaScript, Firebase, serta dashboard monitoring realtime
-            dengan tampilan responsive untuk desktop maupun mobile.
-          </p>
-
-          <p>
-            Meskipun project ini belum digunakan secara penuh dalam
-            operasional yayasan karena proses implementasi terlambat
-            setelah kegiatan proyek yayasan selesai, project ini
-            menjadi pengalaman penting dalam mempelajari sistem
-            absensi digital, role management, realtime database,
-            dan alur kerja monitoring berbasis web.
-          </p>
-
-          <div class="project-footer">
-
-  <div class="project-footer">
-
-  <a
-    href="#"
-    class="demo-btn"
-  >
-    📋 View System
-  </a>
-
-  <div class="login-info">
-
-  <h5>🔑 Demo Login</h5>
-
-  <div class="login-row">
-
-    <p>
-      <strong>Email :</strong>
-      joko321@gmail.com
-    </p>
-
-    <p>
-      <strong>Password :</strong>
-      joko321
-    </p>
-
-  </div>
-
-  <span>
-    Digunakan untuk uji coba sistem
-  </span>
-  </div>
-  
-</div>
-</div>
-
-</div>
-
-        <!-- PROJECT 3 -->
-        <div
-          class="project-card"
-          data-aos="zoom-in"
-          data-aos-delay="400"
-        >
-
-          <h3>
-            WEB & Aplikasi Monitoring dan Laporan kerja Kunjunggan PT Beauty World Indonesia
-          </h3>
-
-          <div class="project-line"></div>
-
-          <p>
-            Web dan aplikasi mobile monitoring kunjungan teknisi ini
-            dikembangkan berdasarkan pengalaman kerja langsung di lapangan
-            saat bekerja sebagai teknisi di PT Beauty World Indonesia.
-          </p>
-
-          <p>
-            Sebelum sistem ini dibuat, proses absensi kunjungan,
-            dokumentasi pekerjaan, dan laporan teknisi masih dilakukan
-            secara manual melalui grup WhatsApp sehingga data sering
-            tercampur dan sulit dimonitor.
-          </p>
-
-          <p>
-            Dari kondisi tersebut, saya mulai menganalisa kebutuhan
-            sistem monitoring yang lebih terstruktur dan mengajukan ide
-            digitalisasi kunjungan teknisi kepada Manager IT perusahaan
-            hingga akhirnya disetujui menjadi project nyata berbasis
-            React Native dan Expo.
-          </p>
-
-          <p>
-            Perusahaan juga mendukung pengembangan sistem ini dengan
-            penggunaan Google Maps API berbayar untuk validasi lokasi,
-            tracking realtime, dan integrasi titik lokasi customer
-            secara lebih akurat.
-          </p>
-
-          <p>
-            Sistem mendukung workflow operasional nyata mulai dari
-            Team Leader membuat tugas kunjungan, teknisi melakukan
-            absensi berdasarkan validasi lokasi realtime, selfie
-            otomatis dengan metadata lokasi dan waktu, hingga
-            pelaporan kerja digital yang terintegrasi dengan backend API
-            dan ERP perusahaan.
-          </p>
-
-          <p>
-            Salah satu bagian paling kompleks dalam project ini adalah
-            sistem statistik dan monitoring performa teknisi untuk
-            kebutuhan operasional perusahaan secara realtime.
-          </p>
-
-          <p>
-            Dalam proses pengembangannya, saya juga banyak memanfaatkan
-            AI tools untuk membantu proses belajar, debugging,
-            eksplorasi ide, dan mempercepat workflow development.
-            Meskipun kemampuan saya saat ini masih terus berkembang,
-            pengalaman project ini membuat saya semakin termotivasi
-            untuk terus belajar agar kedepannya mampu membangun dan
-            memahami sistem secara lebih mandiri dan lebih baik lagi.
-          </p>
-
-          <a
-  href="comingsoon.html"
-  class="demo-btn"
->
-  🚧 In Development
-</a>
-
+        <div class="footer-right">
+          <a href="mailto:hadibagus225@gmail.com" class="footer-link">
+            <i data-lucide="mail" class="footer-icon"></i>
+            hadibagus225@gmail.com
+          </a>
+          <a href="https://github.com/Dhen-Bagus" target="_blank" class="footer-link">
+            <i data-lucide="github" class="footer-icon"></i>
+            github.com/Dhen-Bagus
+          </a>
         </div>
-
       </div>
-
+      <div class="footer-bottom">
+        <p>&copy; 2025 Hadi Bagus Indrawan. All rights reserved.</p>
+      </div>
     </div>
-
-  </section>
-
-  <!-- JOURNEY SECTION -->
-<section class="journey-section">
-
-  <div class="container">
-
-    <div
-      class="journey-card"
-      data-aos="fade-up"
-    >
-
-      <h2>
-               🚀</br>
-My Learning Journey
-      </h2>
-
-      <div class="journey-line"></div>
-
-      <p>
-        Sebagai lulusan SMK non-programming dan mahasiswa kelas karyawan yang harus menjalani dunia kerja sambil kuliah, perjalanan saya dalam mempelajari teknologi dimulai benar-benar dari dasar. Keterbatasan waktu belajar, aktivitas kerja lapangan, serta sistem perkuliahan kelas karyawan yang terbagi antara pembelajaran offline dan online membuat proses belajar tidak selalu mudah untuk dijalani.
-      </p>
-
-      <p>
-        Karena kondisi tersebut, sebagian besar proses pengembangan kemampuan saya banyak dibangun melalui belajar mandiri dari AI tools, Google, YouTube, dokumentasi, dan praktik langsung melalui project nyata yang saya kerjakan secara bertahap. Dari proses tersebut saya belajar bahwa perkembangan kemampuan tidak hanya berasal dari teori di kelas, tetapi juga dari rasa ingin tahu, konsistensi belajar, keberanian mencoba, dan pengalaman nyata di lapangan.
-      </p>
-
-      <p>
-        Pengalaman membangun project nyata ini membuat saya semakin memahami bahwa pengembangan sistem tidak hanya tentang coding, tetapi juga tentang memahami kebutuhan lapangan, problem solving, komunikasi tim, dan proses belajar yang terus berjalan seiring perkembangan teknologi.
-      </p>
-
-      <p>
-        Dalam proses pengembangannya, saya juga banyak memanfaatkan AI tools untuk membantu debugging, eksplorasi ide, memahami alur coding, serta mempercepat proses belajar development modern.
-      </p>
-
-      <p>
-        Dari perjalanan tersebut, saya menjadi semakin termotivasi untuk terus belajar, mengembangkan kemampuan technical maupun problem solving, dan membangun sistem yang lebih baik serta lebih profesional kedepannya.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-  <!-- JS -->
-  <script src="script.js"></script>
+  </footer>
 
   <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
+    AOS.init({ duration: 800, once: true, offset: 80 });
   </script>
+
+  <!-- Lucide Icons Init -->
+  <script>lucide.createIcons();</script>
+
+  <!-- JS -->
+  <script src="script.js"></script>
 
 </body>
 </html>
